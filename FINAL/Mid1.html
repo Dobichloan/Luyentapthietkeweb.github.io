@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal's Information</title>
+</head>
+<body>
+    <h1>Personal's Information</h1>
+    <form action="">
+        <label for="">
+            Name: 
+            <input type="text" name="name" id="name" placeholder="Fill your name" required>
+        </label>
+        <br>
+        <br>
+        <label for="">
+            Age:
+            <input type="number" name="age" id="age" placeholder="Fill your age" required>
+        </label>
+        <br>
+        <br>
+        <label for="">
+            Address:
+            <input type="text" name="address" id="address" placeholder="Fill your address" required>
+        </label>
+        <br>
+        <br>
+        <label for="">
+            Gender:
+            <input type="radio" name="Male" id="male" checked>Male
+            <input type="radio" name="Female" id="female">Female
+        </label>
+        <br>
+        <br>
+        <label for="">
+            Favourite subject:
+            <input type="checkbox" name="Java" id="Java">Java
+            <input type="checkbox" name="R" id="R">R
+            <input type="checkbox" name="Python" id="Python">Python
+        </label>
+        <br>
+        <br>
+        <select name="hobby" id="hobby">
+            Favourite hobby:
+            <option value="listening to music"></option>
+            <option value="reading newspapers"></option>
+            <option value="going to movies"></option>
+        </select>
+        <br>
+        <br>
+        <input onclick="send()" type="button" value="Submit">
+        <input onclick="resetForm()" type="reset" value="Reset">
+    </form>
+    <script>
+        function send(){
+            var a = document.getElementById('name'.value);
+            var b = document.getElementById('age'.value);
+            var c = document.getElementById('address'.value);
+            var checked1 = document.getElementById('Java'.checked);
+            var checked2 = document.getElementById('R'.checked);
+            var checked3 = document.getElementById('Python'.checked);
+            var gender = document.getElementById('Male'.checked);
+            if (Male.checked){
+                gender = Male;
+            // else {
+                    gender = Female;
+                // }
+         }
+            // checked: kiểm tra T or F
+            //cách khai báo biến 1......
+            // var arr = document.getElementsByTagName('input');
+            // console.log(arr);
+            if(name == "" || age == "" || address == ""){
+                // ||: hoặc; "" = rỗng
+                alert("Pleaser fill all fields");
+                return; 
+                // dừng chương trình nếu ko đúng
+            }
+            if(isNaN(age)){
+                alert("Age must be a number");
+            }
+            // isNaN: kiểm tra biến nào có phải là số không
+            if(checked1||checked2||checked3){
+
+            }
+                else{
+                    alert("Least one favourite");
+                    return;               
+               }
+            confirm('Your information\n'+name+)
+        
+
+    </script>
+</body>
+</html>
